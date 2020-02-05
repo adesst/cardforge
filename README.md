@@ -20,3 +20,36 @@ Since the project is open source, I can divulge some of the implementation of th
 
 -Tong Zou
 
+(Addition - adesst)
+
+Install
+=========
+
+Linux/MacOS:
+
+Clone this repository
+$ git clone https://github.com/adesst/cardforge
+
+Make a dependency folder
+$ mkdir dependency
+$ cd dependency
+
+Init and install the jyield lib
+$ git clone https://github.com/adesst/jyield.git
+$ cd jyield/jyield
+$ mvn compile
+$ mvn install:install-file -Dfile=lib/java-yield-1.0-SNAPSHOT.jar -DgroupId=com.google.code.jyield -DartifactId=jyield -Dversion=1.0-SNAPSHOT -Dpackaging=jar
+
+Compile cardforge, make sure you are in the cardforge/ dir
+$ pwd
+%yourdir%/cardforge
+$ mvn compile assemble:single
+
+Execute and run the jar file to start the game
+$ java -jar ./target/forge-1.1.1-SNAPSHOT-jar-with-dependencies.jar
+
+
+
+Windows:
+
+Contributor wanted, to fill in this how-to compile, install in Win based OS
